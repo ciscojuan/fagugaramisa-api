@@ -1,0 +1,67 @@
+{
+    "noticias": [
+      {
+        "id" : 1, 
+        "title": "Creación Pagina Web",
+        "fecha": "22/07/2023",
+        "image": "/img/news/noticias.jpg",
+        "content": "Con el fin de crear un registro de las actividades y eventos que se realizan en el fondo, se creo la pagina para tener visibilidad de estas, y se podran consultar por los miembro en cualquier momento."
+      },
+      {
+        "id" : 2, 
+        "title": "Asamblea extraordinaria",
+        "fecha": "20/07/20023",
+        "image": "/img/news/noticias.jpg",
+        "content": "Se citan a todos los miembreos de Fondo Familiar FAGUGARAMISA para conocer los avancer del mismo durante el año, asi mismo los proximos actividades y eventos"
+      },
+      {
+        "id" : 3, 
+        "title": "Noticias3",
+        "fecha": "Fecha",
+        "image": "/img/news/noticias.jpg",
+        "content": "Contenido"
+      }
+    ],
+    "actividades": [
+      {
+        "id" : 1, 
+        "title": "Actividades",
+        "fecha": "22/07/2023",
+        "image": "/img/activities/activity.jpg",
+        "content": "Contenido"
+      },
+      {
+        "id" : 2, 
+        "title": "Actividades",
+        "fecha": "22/07/2023",
+        "image": "/img/activities/activity.jpg",
+        "content": "Contenido"
+      }
+    ],
+    "users": [
+      {
+        "id" : 1,
+        "name": "Juan Pablo Ramirez",
+        "userType:": "Admin",
+        "address": "AV Boyaca # 70 - 92",
+        "Ciudad": "Bogotá",
+        "Telefono": 3223383813,
+        "email": "ciscojuan@gmail.com",
+        "birthday": "1993/07/18",
+        "regDate": "20/07/2023",
+        "budget": 200000
+      },
+      {
+        "id" : 2,
+        "name": "Jorge Alejandro Ramirez",
+        "userType:": "Socio",
+        "address": "AV Boyaca # 70 - 92",
+        "Ciudad": "Bogotá",
+        "Telefono": 3118009503,
+        "email": "correodejorge93@gmail.com",
+        "birthday": "1993/07/18",
+        "regDate": "20/07/2023",
+        "budget": 100000
+      }
+    ]
+  }
