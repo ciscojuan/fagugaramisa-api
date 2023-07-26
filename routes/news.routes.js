@@ -1,77 +1,83 @@
-const express = require('express');
-const newsService = require('../services/news.service');
+const express = require("express");
+const NewsService = require("../services/news.service");
 
 const router = express.Router();
 
-const service = new newsService();
+const Service = new NewsService();
+router.get("/", async (req, res) => {
+  const news = await Service.find();
+  res.status(200).send({
+    news: news,
+  });
+});
 
-router.get('/', (req, res) => {
-    const news = service.find()
+/* router.get("/news/", async (req, res) => {
+  const { limit, offset } = req.query;
+  if (limit && offset) {
     res.status(200).send({
-        news: news.noticias
-    })
-})
+      message: limit,
+      offset,
+    });
+  } else {
+    res.status(400).send({
+      message: "No se recibio ningun paramentro.",
+    });
+  }
+}); */
 
-    router.get('/news/', (req, res) => {
-        const {limit, offset} = req.query;
-        if(limit && offset){
-        
-            res.status(200).send({
-                "message" : limit, offset
-            })
-            } else {
-                res.status(400).send({
-                    "message": "No se recibio ningun paramentro."
-                })
-            }
+router.get("/:id", async (req, res) => {
+  const { id } = req.params;
+  const news = await Service.findOne(parseInt(id, 10));
+  res.status(200).send({
+    news,
+  });
+});
 
-    })
-
-router.get('/:id', (req, res) => {
-    const { id } = req.params;
-    const news = service.findOne(id)
-    res.status(200).send({
-        data: "ff"
-    })
-})
-
-router.post('/', (req, res) =>{
-    const body = req.body;
-    res.status(200).send({
-        message : 'news article added!',
-        data: body
-    })
-})
-
+router.post("/", async (req, res) => {
+  const body = req.body;
+  const news = await Service.create(body);
+  res.status(201).send({
+    message: "news article added!",
+    data: news,
+  });
+});
 
 //patch
-router.patch('/:id', (req, res) =>{
-    const { id } = req.params;
-    const body = req.body;
-    res.status(200).send({
-        message : 'article updated!',
-        data: body,
-        id
+router.patch("/:id", async (req, res) => {
+  try{const { id } = req.params;
+  //informacion que queremos modificar
+  const body = req.body;
+  const news = await Service.update(id, body);
+  res.status(200).send({
+    news
+  });
+} catch (error){
+    res.status(404).send({
+        message : 'No se encontro el objeto',
+        error : error.message
     })
-})
+}
+});
 //put
-router.put('/:id', (req, res) =>{
-    const { id } = req.params;
-    const body = req.body;
-    res.status(200).send({
-        message : 'article updated!',
-        data: body,
-        id
-    })
-})
+router.put("/:id", async (req, res) => {
+  const { id } = req.params;
+  //informacion que queremos modificar
+  const body = req.body;
+  const news = await Service.update(id, body);
+  res.status(200).send({
+    message: "article updated!",
+    news
+  });
+});
 
 //delete
-router.delete('/:id', (req, res) =>{
-    const { id } = req.params;
-    res.status(200).send({
-        message : 'article Deleted!',
-        id
-    })
-})
+router.delete("/:id", async (req, res) => {
+  const { id } = req.params;
+  const news = await Service.delete(id) 
+  res.status(200).send({
+    message: "article Deleted!",
+    news
+  });
+});
 
 module.exports = router;
