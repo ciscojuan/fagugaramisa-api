@@ -11,23 +11,15 @@ router.get("/", async (req, res) => {
   });
 });
 
-/* router.get("/news/", async (req, res) => {
-  const { limit, offset } = req.query;
-  if (limit && offset) {
-    res.status(200).send({
-      message: limit,
-      offset,
-    });
-  } else {
-    res.status(400).send({
-      message: "No se recibio ningun paramentro.",
-    });
-  }
-}); */
-
 router.get("/:id", async (req, res) => {
   const { id } = req.params;
   const news = await Service.findOne(parseInt(id, 10));
+  if(!news){
+    res.status(404).send({
+        message : 'Objeto no encontrado',
+        solicitud: id
+    })
+  }
   res.status(200).send({
     news,
   });

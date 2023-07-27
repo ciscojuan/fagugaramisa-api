@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Juan Pablo Ramirez",
+      "userType:": "Admin",
+      "address": "AV Boyaca # 70 - 92",
+      "Ciudad": "Bogotá",
+      "Telefono": 3223383813,
+      "email": "ciscojuan@gmail.com",
+      "birthday": "1993/07/18",
+      "regDate": "20/07/2023",
+      "budget": 200000
+    },
+    {
+      "id": 2,
+      "name": "Jorge Alejandro Ramirez",
+      "userType:": "Socio",
+      "address": "AV Boyaca # 70 - 92",
+      "Ciudad": "Bogotá",
+      "Telefono": 3118009503,
+      "email": "correodejorge93@gmail.com",
+      "birthday": "1993/07/18",
+      "regDate": "20/07/2023",
+      "budget": 100000
+    }
+  ]
+}

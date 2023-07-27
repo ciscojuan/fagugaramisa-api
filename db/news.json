@@ -1,0 +1,60 @@
+{
+  "noticias": [
+    {
+      "id": 1,
+      "title": "Creación Pagina Web",
+      "fecha": "22/07/2023",
+      "image": "/img/news/noticias.jpg",
+      "content": "Con el fin de crear un registro de las actividades y eventos que se realizan en el fondo, se creo la pagina para tener visibilidad de estas, y se podran consultar por los miembro en cualquier momento."
+    },
+    {
+      "id": 2,
+      "title": "Asamblea extraordinaria",
+      "fecha": "20/07/20023",
+      "image": "/img/news/noticias.jpg",
+      "content": "Se citan a todos los miembreos de Fondo Familiar FAGUGARAMISA para conocer los avancer del mismo durante el año, asi mismo los proximos actividades y eventos"
+    },
+    {
+      "id": 3,
+      "title": "Noticias3",
+      "fecha": "20/07/20023",
+      "image": "/img/news/noticias.jpg",
+      "content": "Contenido"
+    },
+    {
+      "id": 4,
+      "title": "Noticias4",
+      "fecha": "20/07/20023",
+      "image": "/img/news/noticias.jpg",
+      "content": "Contenido"
+    },
+    {
+      "id": 4,
+      "title": "Noticias4",
+      "fecha": "20/07/20023",
+      "image": "/img/news/noticias.jpg",
+      "content": "Contenido"
+    },
+    {
+      "id": 4,
+      "title": "Noticias4",
+      "fecha": "20/07/20023",
+      "image": "/img/news/noticias.jpg",
+      "content": "Contenido"
+    },
+    {
+      "id": 4,
+      "title": "Noticias4",
+      "fecha": "20/07/20023",
+      "image": "/img/news/noticias.jpg",
+      "content": "Contenido"
+    },
+    {
+      "id": 4,
+      "title": "Noticias4",
+      "fecha": "20/07/20023",
+      "image": "/img/news/noticias.jpg",
+      "content": "Contenido"
+    }
+  ]
+}
